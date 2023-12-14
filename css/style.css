@@ -19,7 +19,7 @@
   margin-bottom: 1rem;
 }
 
-form {
+div.add {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,10 +43,15 @@ form {
   background-color: #ddd;
 }
 
-#todoSubmit {
+#todoAdd {
+  background-color: #bbb;
   flex-basis: 10%;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
+}
+
+#todoAdd:hover {
+  background-color: #ddd;
 }
 
 .body {
