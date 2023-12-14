@@ -14,7 +14,10 @@ function addItem() {
 }
 
 document.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
+  if (
+    e.key === "Enter" &&
+    document.activeElement === document.getElementById("todoTxt")
+  ) {
     addItem();
   }
 });
