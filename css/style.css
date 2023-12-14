@@ -20,3 +20,13 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+.addTodo {
+  border: none;
+  font-size: 16pt;
+  padding: 0.5rem;
+}
+
+#todoSubmit {
+  clear: left;
+}
