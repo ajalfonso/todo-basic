@@ -38,17 +38,13 @@
 }
 
 .body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
-/* #todoList {
-  background-color: lightskyblue;
-  padding: 1rem;
-} */
+#todoList {
+  display: flex;
+  flex-direction: column;
+}
 
 #todoList li:nth-child(odd) {
   background-color: #bbb;
@@ -58,7 +54,5 @@
   background-color: #eee;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
   font-size: 16pt;
 }
