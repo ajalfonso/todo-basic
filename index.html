@@ -10,14 +10,14 @@
     <div id="todoHeader" class="header">
       <script src="js/main.js"></script>
       <h1 id="todoTitle">Basic To-Do List</h1>
-      <form>
+      <div class="add">
         <input
           name="todo"
           id="todoTxt"
           placeholder="Enter To-Do"
           class="addTodo"
-        /><input type="submit" value="Submit" id="todoSubmit" class="addTodo" />
-      </form>
+        /><span onclick="addItem()" id="todoAdd" class="addTodo">Add</span>
+      </div>
     </div>
     <div id="todoBody" class="body">
       <ul id="todoList" class="list">
