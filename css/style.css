@@ -50,7 +50,12 @@ form {
 }
 
 .body {
-  text-align: center;
+  text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  .body {
+    text-align: center;
+  }
 }
 
 #todoList {
@@ -64,6 +69,8 @@ form {
 
 .todoItem {
   background-color: #eee;
+  padding-left: 4rem;
+  padding-right: 4rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 16pt;
