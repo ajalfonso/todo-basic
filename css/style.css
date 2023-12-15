@@ -7,14 +7,14 @@
   list-style: none;
 }
 
-.header {
+div.header {
   text-align: center;
   background-color: orange;
   padding-top: 0.5rem;
   padding-bottom: 1.5rem;
 }
 
-#todoTitle {
+h1#todoTitle {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -32,29 +32,31 @@ div.add {
   padding-bottom: 0.5rem;
 }
 
-#todoTxt {
+input#todoTxt {
   flex-basis: 80%;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
 
-#todoTxt:focus {
+input#todoTxt:focus {
   outline: none;
   background-color: #ddd;
 }
 
-#todoAdd {
+span#todoAdd {
   background-color: #bbb;
   flex-basis: 10%;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
 
-#todoAdd:hover {
+span#todoAdd:hover {
   background-color: #ddd;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
-.body {
+div.body {
   text-align: left;
 }
 @media only screen and (max-width: 800px) {
@@ -63,16 +65,13 @@ div.add {
   }
 }
 
-#todoList {
+ul#todoList {
   display: flex;
   flex-direction: column;
 }
 
-#todoList li:nth-child(odd) {
-  background-color: #bbb;
-}
-
-.todoItem {
+ul#todoList li.todoItem {
+  position: relative;
   background-color: #eee;
   padding-left: 4rem;
   padding-right: 4rem;
@@ -81,18 +80,47 @@ div.add {
   font-size: 16pt;
 }
 
+ul#todoList li.todoItem:hover {
+  background-color: #bbb;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+ul#todoList li:nth-child(odd) {
+  background-color: #ddd;
+}
+
+ul#todoList li.todoItem.checked {
+  background-color: #999;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+ul#todoList li.todoItem.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 1rem;
+  left: 1.7rem;
+  transform: rotate(45deg);
+  height: 1.2rem;
+  width: 0.5rem;
+}
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
@@ -102,7 +130,6 @@ div.add {
   max-width: 700px;
 }
 
-/* The Close Button */
 .close {
   position: absolute;
   top: 15px;
@@ -120,7 +147,6 @@ div.add {
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
